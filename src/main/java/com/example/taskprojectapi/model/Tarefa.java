@@ -8,4 +8,43 @@ public class Tarefa {
     private PrioridadeEnum prioridade;
     private Responsavel responsavel;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public StatusEnum getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusEnum status) {
+        this.status = status;
+    }
+
+    public PrioridadeEnum getPrioridade() {
+        return prioridade;
+    }
+
+    public void setPrioridade(PrioridadeEnum prioridade) {
+        this.prioridade = prioridade;
+    }
+
+    public Responsavel getResponsavel() {
+        return responsavel;
+    }
+
+    public void setResponsavel(Responsavel responsavel) {
+        this.responsavel = responsavel;
+    }
 }
