@@ -2,18 +2,21 @@ package com.example.taskprojectapi.database;
 
 import com.example.taskprojectapi.model.Responsavel;
 import com.example.taskprojectapi.model.Tarefa;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class Database {
 
     private static Integer nextId = 0;
 
     private static List<Tarefa> tarefas = new ArrayList<>();
 
-    public static void adicionarTarefa(Tarefa tarefa) {
+    public static Tarefa adicionarTarefa(Tarefa tarefa) {
         Database.tarefas.add(tarefa);
+        return tarefa;
     }
 
     public static void removerTarefa(Integer id) {
@@ -49,6 +52,7 @@ public class Database {
         Database.nextId = Database.nextId + 1;
         return Database.nextId;
     }
+
 
 
 }
