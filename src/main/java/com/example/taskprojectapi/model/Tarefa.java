@@ -8,6 +8,14 @@ public class Tarefa {
     private PrioridadeEnum prioridade;
     private Responsavel responsavel;
 
+    public Tarefa(Integer id, String descricao, StatusEnum status, PrioridadeEnum prioridade, Responsavel responsavel) {
+        this.id = id;
+        this.descricao = descricao;
+        this.status = status;
+        this.prioridade = prioridade;
+        this.responsavel = responsavel;
+    }
+
     public Integer getId() {
         return id;
     }

@@ -15,6 +15,8 @@ public class Database {
     private static List<Tarefa> tarefas = new ArrayList<>();
 
     public static Tarefa adicionarTarefa(Tarefa tarefa) {
+        Integer idTarefa = setId();
+        tarefa.setId(idTarefa);
         Database.tarefas.add(tarefa);
         return tarefa;
     }
