@@ -39,4 +39,11 @@ public class TarefaController {
         return ResponseEntity.ok(response);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletar(@PathVariable("id") Integer id) {
+        this.tarefaService.deletar(id);
+        return ResponseEntity.ok().build();
+    }
+
+
 }

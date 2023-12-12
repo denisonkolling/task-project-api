@@ -29,7 +29,7 @@ public class Database {
         return Database.tarefas;
     }
 
-    public static Tarefa consultar(Integer id) {
+    public static Tarefa consultarTarefa(Integer id) {
         return Database.tarefas.stream()
                 .filter(task -> task.getId().equals(id))
                 .findFirst().orElseThrow(() -> new IllegalArgumentException("A tarefa não foi encontrada"));
