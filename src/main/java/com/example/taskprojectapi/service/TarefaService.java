@@ -20,9 +20,9 @@ public class TarefaService {
                     .collect(Collectors.toList());
         }
 
-        if (name != null) {
+        if (responsavel != null) {
             return tarefas.stream()
-                    .filter(tarefa -> tarefa.getResponsavel().getNome().equalsIgnoreCase(name))
+                    .filter(tarefa -> tarefa.getResponsavel().getNome().equalsIgnoreCase(responsavel))
                     .collect(Collectors.toList());
         }
 
