@@ -33,4 +33,10 @@ public class TarefaController {
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Tarefa> atualizar(@PathVariable("id") Integer id, @RequestBody Tarefa tarefa) {
+        Tarefa response = this.tarefaService.atualizar(id, tarefa);
+        return ResponseEntity.ok(response);
+    }
+
 }

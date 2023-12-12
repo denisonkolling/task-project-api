@@ -30,5 +30,14 @@ public class TarefaService {
 
     }
 
+    public Tarefa atualizar(Integer id, Tarefa tarefa) {
+        Tarefa tarefaDB = Database.consultar(id);
+        tarefaDB.setResponsavel(tarefa.getResponsavel());
+        tarefaDB.setPrioridade(tarefa.getPrioridade());
+        tarefaDB.setDescricao(tarefa.getDescricao());
+        tarefaDB.setStatus(tarefa.getStatus());
+        return tarefaDB;
+    }
+
 }
 
