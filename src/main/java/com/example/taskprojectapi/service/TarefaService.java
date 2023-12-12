@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 @Service
 public class TarefaService {
 
-    public List<Tarefa> listarTodas(StatusEnum status, String name) {
+    public List<Tarefa> listarTodas(StatusEnum status, String responsavel) {
 
         List<Tarefa> tarefas = Database.listarTodasTarefas();
 

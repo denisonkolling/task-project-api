@@ -25,8 +25,8 @@ public class TarefaController {
     }
 
     @GetMapping
-    public ResponseEntity <List<Tarefa>> listarTarefas(@RequestParam(name = "status", required = false) StatusEnum status, @RequestParam(name = "responsavel", required = false) String nome) {
-        List<Tarefa> response = this.tarefaService.listarTodas(status, nome);
+    public ResponseEntity <List<Tarefa>> listarTarefas(@RequestParam(name = "status", required = false) StatusEnum status, @RequestParam(name = "responsavel", required = false) String responsavel) {
+        List<Tarefa> response = this.tarefaService.listarTodas(status, responsavel);
         if (response.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
